@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header py-4">
+      <h1>Weather Forecast</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="cityInput" placeholder="Enter city name">
+            <label class="cn" for="cityInput">City name</label>
+          </div>
+          <button id="searchBtn" type="button" class="btn btn-light btn-lg">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- Move the temperature toggle here -->
+        <div class="temperature-toggle">
+          <label class="switch">
+            <input type="checkbox" id="temperatureUnitToggle">
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-label">Toggle Celsius / Fahrenheit</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="weather-container my-4 p-4">
+          <div class="current-weather">
+            <h2 id="cityName"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <img id="weatherIcon" src="https://cdn-icons-png.flaticon.com/128/1163/1163661.png" alt="Weather Icon">
+          </div>
+          <div class="forecast">
+            <h2 style="color: #5b5a5a;">Five Days Forecast</h2>
+            <div id="forecastCards" class="d-flex flex-wrap justify-content-between"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
